@@ -1,0 +1,8 @@
+.new-task-div {
+  display: flex;
+  align-items: baseline;
+}
+
+.new-task-button-margin {
+  margin: 15px;
+}

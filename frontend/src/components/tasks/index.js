@@ -1,15 +1,16 @@
 import React from 'react';
 import Container from '@material-ui/core/Container';
-import CssBaseline from '@material-ui/core/CssBaseline';
 
 import  TasksList from '../tasksList'
+import Newtask from '../newTask'
 
+import './index.css'
 
 const TasksHome = () => {
   return (
     <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="lg">
+      <Container className='tasks-home-margin' maxWidth="lg">
+        <Newtask />
         <TasksList />
       </Container>
     </React.Fragment>
