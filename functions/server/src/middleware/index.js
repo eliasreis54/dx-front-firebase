@@ -1,4 +1,5 @@
 const admin = require('firebase-admin')
+const functions = require('firebase-functions');
 
 const authMiddleware = async (req, res, next) => {
   const { authorization } = req.headers
@@ -15,7 +16,7 @@ const authMiddleware = async (req, res, next) => {
     req.user = decodedToken
     return next()
   } catch (e) {
-    console.log(e)
+    functions.logger.info(`Error on decode token ${e.message}`, {structuredData: true});
     return res.sendStatus(401)
   }
 }
