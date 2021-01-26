@@ -1,5 +1,8 @@
 const config = {
-  backend_host: 'https://us-central1-dx-frontend.cloudfunctions.net/api',
+  backend_host: {
+    production: 'https://us-central1-dx-frontend.cloudfunctions.net/api',
+    development: 'http://localhost:5001/dx-frontend/us-central1/api',
+  },
   firebaseConfig: {
     apiKey: "AIzaSyAXk1tUTRicitO9uHATUpdgRFgcJkQht1o",
     authDomain: "dx-frontend.firebaseapp.com",
