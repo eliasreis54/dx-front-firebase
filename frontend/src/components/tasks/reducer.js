@@ -1,12 +1,12 @@
-import { ADD_TASK } from './actionsType'
+import { ADD_TASK, GET_ALL_TASKS, UPDATE_TASK } from './actionsType'
 
 const initialState = {
-  tasks: [{
-    description: 'teste',
-    author: 'elias reis',
-    done: false,
-    id: '',
-  }]
+  tasks: []
+}
+
+const filterTasks = (currentTasks, task) => {
+  const filteredTasks = currentTasks.filter(t => t.id !== task.id)
+  return [...filteredTasks, task]
 }
 
 const taskReducer = (state = initialState, action) => {
@@ -15,6 +15,16 @@ const taskReducer = (state = initialState, action) => {
       return {
         ...state,
         tasks: [...state.tasks, action.payload]
+      }
+    case GET_ALL_TASKS:
+      return {
+        ...state,
+        tasks: action.payload,
+      }
+    case UPDATE_TASK:
+      return {
+        ...state,
+        tasks: filterTasks(state.tasks, action.payload)
       }
     default:
       return state
