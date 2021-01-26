@@ -9,9 +9,9 @@ const TasksList = ({ tasks }) => {
     <div>
       {tasks.map((task, id) => {
         return (
-          <div className='taskItem'>
-            <h1>xs</h1>
-            <Checkbox checked={true} onChange={console.log} name="checkedA" />
+          <div key={id} className='taskItem'>
+            <h1>{task.description}</h1>
+            <Checkbox checked={task.done} onChange={() => console.log('teste')} name="checkedA" />
           </div>
         )
       })}

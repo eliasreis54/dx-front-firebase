@@ -8,20 +8,21 @@ import { connect } from 'react-redux'
 import { doLogoutUser } from './components/firebase/thunks'
 import TasksHome from './components/tasks'
 import PrivateRouter from './components/privateRouter'
-
+import LoginPage from './components/login/'
 import './App.css';
 
-const App = () => {
+const App = ({ logout }) => {
   return (
     <Router>
       <Switch>
         <Route path="/login" exact = { true }>
           <div>
-            <p> Lucas Reis </p>
+            <LoginPage />
           </div>
         </Route>
         <PrivateRouter>
           <Route path="/" exact = { true }>
+            <button onClick={logout}> sair </button>
             <TasksHome />
           </Route>
         </PrivateRouter>

@@ -1,5 +1,9 @@
 const ADD_TASK = 'ADD_TASK'
+const GET_ALL_TASKS = 'GET_ALL_TASKS'
+const UPDATE_TASK = 'UPDATE_TASK'
 
 export {
   ADD_TASK,
+  GET_ALL_TASKS,
+  UPDATE_TASK,
 }

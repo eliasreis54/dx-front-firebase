@@ -1,7 +1,12 @@
 import { ADD_TASK } from './actionsType'
 
 const initialState = {
-  tasks: ['a', 'b','a'],
+  tasks: [{
+    description: 'teste',
+    author: 'elias reis',
+    done: false,
+    id: '',
+  }]
 }
 
 const taskReducer = (state = initialState, action) => {

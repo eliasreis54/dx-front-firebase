@@ -1,0 +1,104 @@
+html,body{
+  height: 100%;
+  font-family: 'Numans', sans-serif;
+}
+
+.Login-background {
+  background: white;
+  min-height: 100vh;
+  color: black;
+}
+
+.Login-image {
+  width: 30%;
+}
+
+.Login-dx-image {
+  width: 100%;
+}
+
+.Login-dx-left {
+  text-align: end;
+}
+
+.Login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  justify-content: center;
+}
+
+.Login-dx-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Login-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Login-google-image {
+  width: 20%;
+}
+
+.Login-text {
+  margin: 10px;
+  font-size: 1.5em;
+}
+
+
+
+/*****************/
+/* Made with love by Mutiullah Samim*/
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+.container{
+  height: 100%;
+  align-content: center;
+}
+
+.card{
+  height: 370px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 450px;
+}
+
+.card > * {
+  color: white;
+}
+
+.custom-google-link{
+  text-transform:none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5vw;
+  border: solid;
+  padding: 10px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.custom-google-link:hover {
+  background-color: #eaffea;
+}
+
+.custom-image-button{
+  margin-bottom:3px; 
+  margin-right:5px
+}
+
+.content-login{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
