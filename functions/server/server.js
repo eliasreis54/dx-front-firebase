@@ -6,7 +6,6 @@ const { authMiddleware } = require('./src/middleware')
 
 const app = express()
 
-
 app.use(express.json())
 app.use(cors())
 

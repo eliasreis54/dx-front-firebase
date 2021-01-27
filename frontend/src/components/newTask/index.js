@@ -28,7 +28,7 @@ const NewTask = ({ onClickButton }) => {
     <div className='new-task-div'>
       <TextField fullWidth onChange={inputOnChange} defaultValue={taskName} margin="dense" required id="standard-required" label="Required" />
       <Button onClick={() => createTask()} variant="contained" color="primary">
-        Primary
+        Adicionar 
       </Button>
     </div>
   )
